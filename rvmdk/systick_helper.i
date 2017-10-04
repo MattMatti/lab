@@ -9134,7 +9134,25 @@ extern uint32_t SysTickValueGet(void);
 
 
 #line 5 "src\\SysTick_helper.h"
+#line 1 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdbool.h"
+ 
 
+
+
+
+
+
+ 
+
+
+
+
+
+#line 25 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdbool.h"
+
+
+
+#line 6 "src\\SysTick_helper.h"
 
 struct SysTickTimer
 {
@@ -9143,12 +9161,14 @@ struct SysTickTimer
 };
 
 void SysTick_Setup(void);
-void InterruptEnable(void);
+void SysTickWait(unsigned long);
+void SysTickWait10ms(unsigned long);
 #line 2 "src\\SysTick_helper.c"
+#line 3 "src\\SysTick_helper.c"
 
 
 
-int SetPeriod = 0x0000FFFF;
+int SetPeriod = 0x0011FFFF;
 
 
 void SysTick_Setup()
@@ -9159,8 +9179,26 @@ void SysTick_Setup()
 }
 
 
-void InterruptEnable() 
+
+void SysTickWait(unsigned long delay)
 {
-	SysTickIntEnable(); 
-	
+	(*((volatile uint32_t *)0xE000E014)) = delay-1;  
+  (*((volatile uint32_t *)0xE000E018)) = 0;       
+  while(((*((volatile uint32_t *)0xE000E010)) & 0x00010000)==0)
+	{ 
+	}
 }
+
+
+
+
+void SysTickWait10ms(unsigned long delay)
+{
+  unsigned long i;
+  for(i=0; i<delay; i++)
+	{
+    SysTickWait(800000);  
+  }
+}
+
+

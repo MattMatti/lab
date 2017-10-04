@@ -9862,6 +9862,696 @@ extern void GPIOADCTriggerDisable(uint32_t ui32Port, uint8_t ui8Pins);
 
 
 #line 12 "src\\PWM_helper.h"
+#line 1 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 213 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 384 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 555 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 726 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 875 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 1024 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 1250 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 1399 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 1625 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 1774 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 2000 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 2171 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 2342 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 2513 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 2684 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 2833 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 2982 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 3208 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 3357 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 3583 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 3732 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 3958 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 4136 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 4314 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 4492 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 4646 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 4880 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 5034 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 5268 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 5422 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 5656 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 5880 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 6104 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 6288 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 6593 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 6777 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 7082 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 7313 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 7544 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 7733 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 8046 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 8125 ".\\driverlib\\pin_map.h"
+
+#line 8132 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+
+
+
+
+#line 8148 ".\\driverlib\\pin_map.h"
+
+#line 8155 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 8208 ".\\driverlib\\pin_map.h"
+
+#line 8216 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 8548 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 8857 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 9166 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 9483 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 9886 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 10338 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 10749 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 11209 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 11669 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 12041 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 12536 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 12930 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 13455 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 13811 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 14167 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 14671 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 15197 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 15732 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 16267 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 16639 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 17134 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 17528 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 18053 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 18409 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 18765 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 19269 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 19804 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 20378 ".\\driverlib\\pin_map.h"
+
+
+
+
+
+
+#line 20952 ".\\driverlib\\pin_map.h"
+
+#line 13 "src\\PWM_helper.h"
 #line 2 "src\\PWM_helper.c"
 
 void delayMS(int ms) 
@@ -9883,9 +10573,9 @@ main(void)
     SysCtlPeripheralEnable(0xf0004001);  
 
     
-    GPIOPinConfigure(GPIO_F1_M1PWM5);
-    GPIOPinConfigure(GPIO_PF2_M1PWM6);
-    GPIOPinConfigure(GPIO_PF3_M1PWM7);
+    GPIOPinConfigure(0x00050405);
+    GPIOPinConfigure(0x00050805);
+    GPIOPinConfigure(0x00050C05);
     GPIOPinTypePWM(0x40025000, 0x00000002 | 0x00000004 | 0x00000008);
 
     
@@ -9929,5 +10619,4 @@ main(void)
         PWMPulseWidthSet(0x40029000, 0x00000106,pwmNow);
         PWMPulseWidthSet(0x40029000, 0x00000107,pwmNow);
     }
-
 }

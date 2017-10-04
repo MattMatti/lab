@@ -25,6 +25,7 @@ struct ADC_Strings_FSRs
 };
 	
 
+void SetupADCPins(void);
 void SetupADC(void);
 void ADCReadChan(void);  
 

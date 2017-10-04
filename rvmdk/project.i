@@ -21957,7 +21957,7 @@ extern __declspec(__nothrow) int __C_library_version_number(void);
 
 #line 4 "./src/SysTick_helper.h"
 #line 5 "./src/SysTick_helper.h"
-
+#line 6 "./src/SysTick_helper.h"
 
 struct SysTickTimer
 {
@@ -21966,7 +21966,8 @@ struct SysTickTimer
 };
 
 void SysTick_Setup(void);
-void InterruptEnable(void);
+void SysTickWait(unsigned long);
+void SysTickWait10ms(unsigned long);
 #line 46 "project.h"
 #line 1 "./src/GPIO_helper.h"
 #line 2 "./src/GPIO_helper.h"
@@ -22312,6 +22313,7 @@ void UpdateMYButtons(void);
 #line 10 "./src/PWM_helper.h"
 #line 11 "./src/PWM_helper.h"
 #line 12 "./src/PWM_helper.h"
+#line 13 "./src/PWM_helper.h"
 #line 48 "project.h"
 #line 1 "./src/ADC_helper.h"
 #line 2 "./src/ADC_helper.h"
@@ -23259,6 +23261,8 @@ extern __declspec(__nothrow) void __use_no_semihosting(void);
 
 void UartSetup(void);		
 
+void PutInUartVariable(void); 
+
 
 int fputc(int ch, FILE *f);
 
@@ -23363,11 +23367,6 @@ int  main(void)
     
 		}
     
-		
-    
-
-
-
     while(1)
 		{
 
@@ -23397,7 +23396,7 @@ int  main(void)
 		
 
 
-		
+	
 
 	GPIOSetup();
 	

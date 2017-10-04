@@ -70254,7 +70254,7 @@ N
 N#endif // __TM4C123GH6PM_H__
 L 4 "./src/SysTick_helper.h" 2
 N#include "systick.h"
-N
+N#include <stdbool.h>
 N
 Nstruct SysTickTimer
 N{
@@ -70263,7 +70263,8 @@ N	uint64_t uSTimer;
 N};
 N
 Nvoid SysTick_Setup(void);
-Nvoid InterruptEnable(void);
+Nvoid SysTickWait(unsigned long);
+Nvoid SysTickWait10ms(unsigned long);
 L 46 "project.h" 2
 N#include "./src/GPIO_helper.h"
 L 1 "./src/GPIO_helper.h" 1
@@ -70686,8 +70687,9 @@ N#include "tm4c123gh6pm.h"
 N#include "hw_gpio.h"
 N#include "hw_types.h"
 N#include "pwm.h"
-W "./src/PWM_helper.h" 11 18 last line of file ends without a newline
 N#include "gpio.h"
+W "./src/PWM_helper.h" 12 21 last line of file ends without a newline
+N#include "pin_map.h"
 L 48 "project.h" 2
 N#include "./src/ADC_helper.h"
 L 1 "./src/ADC_helper.h" 1
@@ -71851,6 +71853,8 @@ N
 N
 Nvoid UartSetup(void);		//sets up Uart for my configuration using library
 N
+Nvoid PutInUartVariable(void); 
+N
 N//redirect for printf.
 Nint fputc(int ch, FILE *f);
 N
@@ -71964,11 +71968,6 @@ N    {
 N    
 N		}
 N    
-N		// Enable the GPIO pin for the LED (PF3).  Set the direction as output, and
-N    // enable the GPIO pin for digital function.
-N//		GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1);
-N//		GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2);
-N//    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_3);
 N    while(1)
 N		{
 N// UART
@@ -71998,7 +71997,7 @@ N
 N		//	}
 N
 N//GPIO
-N		
+N	
 N
 N	GPIOSetup();
 N	
@@ -72024,6 +72023,6 @@ N
 N}
 N			
 N			}
-W "project.c" 100 4 last line of file ends without a newline
+W "project.c" 95 4 last line of file ends without a newline
 W "project.c" 30 12 variable "temp"  was declared but never referenced
 N		}

@@ -37,11 +37,6 @@ int  main(void)
     
 		}
     
-		// Enable the GPIO pin for the LED (PF3).  Set the direction as output, and
-    // enable the GPIO pin for digital function.
-//		GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1);
-//		GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2);
-//    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_3);
     while(1)
 		{
 // UART
@@ -71,7 +66,7 @@ int  main(void)
 		//	}
 
 //GPIO
-		
+	
 
 	GPIOSetup();
 	

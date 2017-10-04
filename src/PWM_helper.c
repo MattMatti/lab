@@ -5,8 +5,7 @@ void delayMS(int ms)
     SysCtlDelay( (SysCtlClockGet()/(3*1000))*ms );
 }
 
-int
-main(void)
+ void SetUpPWM50cycle()
 {
     //Set the clock
    SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC |   SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
@@ -19,7 +18,7 @@ main(void)
     SysCtlPeripheralEnable(SYSCTL_PERIPH_PWM1);  //The Tiva Launchpad has two modules (0 and 1). Module 1 covers the LED pins
 
     //Configure PF1,PF2,PF3 Pins as PWM
-    GPIOPinConfigure(GPIO_F1_M1PWM5);
+    GPIOPinConfigure(GPIO_PF1_M1PWM5); // pin1 port F is pwm5 of module 1 
     GPIOPinConfigure(GPIO_PF2_M1PWM6);
     GPIOPinConfigure(GPIO_PF3_M1PWM7);
     GPIOPinTypePWM(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
@@ -65,5 +64,4 @@ main(void)
         PWMPulseWidthSet(PWM1_BASE, PWM_OUT_6,pwmNow);
         PWMPulseWidthSet(PWM1_BASE, PWM_OUT_7,pwmNow);
     }
-
 }

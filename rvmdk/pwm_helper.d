@@ -11,3 +11,4 @@
 .\rvmdk\pwm_helper.o: .\inc\hw_types.h
 .\rvmdk\pwm_helper.o: .\driverlib\pwm.h
 .\rvmdk\pwm_helper.o: .\driverlib\gpio.h
+.\rvmdk\pwm_helper.o: .\driverlib\pin_map.h

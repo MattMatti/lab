@@ -11,6 +11,8 @@
 
 void UartSetup(void);		//sets up Uart for my configuration using library
 
+void PutInUartVariable(void); 
+
 //redirect for printf.
 int fputc(int ch, FILE *f);
 

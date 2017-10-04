@@ -30,7 +30,6 @@ Rebuild target 'project'
 creating preprocessor file for project.c...
 assembling startup_rvmdk.S...
 creating preprocessor file for example.c...
-creating preprocessor file for uart_helper.c...
 compiling example.c...
 src\example.h(5): warning:  #1-D: last line of file ends without a newline
   void my_function(void);
@@ -41,18 +40,19 @@ src\example.c(6): warning:  #550-D: variable "j"  was set but never used
 src\example.c(6): warning:  #550-D: variable "k"  was set but never used
   	int i,j,k;
 src\example.c: 4 warnings, 0 errors
-compiling uart_helper.c...
-src\uart_helper.c(1): error:  #5: cannot open source input file "project.h": No such file or directory
-  #include "project.h"
-src\uart_helper.c: 0 warnings, 1 error
+creating preprocessor file for uart_helper.c...
 creating preprocessor file for ADC_helper.c...
-creating preprocessor file for GPIO_helper.c...
+compiling uart_helper.c...
+src\uart_helper.c(85): warning:  #1-D: last line of file ends without a newline
+   }
+src\uart_helper.c: 1 warning, 0 errors
 compiling ADC_helper.c...
 src\ADC_helper.h(31): warning:  #1-D: last line of file ends without a newline
   extern struct ADC_Strings_FSRs StringAndFSR_values;
 src\ADC_helper.c(83): warning:  #1-D: last line of file ends without a newline
   }
 src\ADC_helper.c: 2 warnings, 0 errors
+creating preprocessor file for GPIO_helper.c...
 creating preprocessor file for PWM_helper.c...
 compiling GPIO_helper.c...
 src\GPIO_helper.h(28): warning:  #1-D: last line of file ends without a newline
@@ -61,19 +61,6 @@ src\GPIO_helper.c(200): warning:  #1-D: last line of file ends without a newline
   			
 src\GPIO_helper.c: 2 warnings, 0 errors
 creating preprocessor file for SysTick_helper.c...
-compiling PWM_helper.c...
-src\PWM_helper.h(11): warning:  #1-D: last line of file ends without a newline
-  #include "gpio.h"
-src\PWM_helper.c(22): error:  #20: identifier "GPIO_F1_M1PWM5" is undefined
-      GPIOPinConfigure(GPIO_F1_M1PWM5);
-src\PWM_helper.c(23): error:  #20: identifier "GPIO_PF2_M1PWM6" is undefined
-      GPIOPinConfigure(GPIO_PF2_M1PWM6);
-src\PWM_helper.c(24): error:  #20: identifier "GPIO_PF3_M1PWM7" is undefined
-      GPIOPinConfigure(GPIO_PF3_M1PWM7);
-src\PWM_helper.c(69): warning:  #1-D: last line of file ends without a newline
-  }
-src\PWM_helper.c: 2 warnings, 3 errors
-compiling SysTick_helper.c...
 compiling project.c...
 driverlib/hibernate.h(229): warning:  #231-D: declaration is not visible outside of function
   extern void HibernateCalendarSet(struct tm *psTime);
@@ -92,19 +79,19 @@ C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h(1546): warning:  #4
 C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h(1550): warning:  #47-D: incompatible redefinition of macro "NVIC_BASE"  (declared at line 148 of "inc/hw_memmap.h")
   #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    
 *!< NVIC Base Address */
-C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1595): warning:  #47-D: incompatible redefinition of macro "EEPROM_BASE"  (declared at line 121 of "inc/hw_memmap.h")
-  #define EEPROM_BASE                     0x400AF000UL
-C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1596): warning:  #47-D: incompatible redefinition of macro "SYSEXC_BASE"  (declared at line 133 of "inc/hw_memmap.h")
-  #define SYSEXC_BASE                     0x400F9000UL
-C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1597): warning:  #47-D: incompatible redefinition of macro "HIB_BASE"  (declared at line 134 of "inc/hw_memmap.h")
-  #define HIB_BASE                        0x400FC000UL
-C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1598): warning:  #47-D: incompatible redefinition of macro "FLASH_CTRL_BASE"  (declared at line 135 of "inc/hw_memmap.h")
-  #define FLASH_CTRL_BASE                 0x400FD000UL
-C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1599): warning:  #47-D: incompatible redefinition of macro "SYSCTL_BASE"  (declared at line 136 of "inc/hw_memmap.h")
-  #define SYSCTL_BASE                     0x400FE000UL
-C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1600): warning:  #47-D: incompatible redefinition of macro "UDMA_BASE"  (declared at line 137 of "inc/hw_memmap.h")
-  #define UDMA_BASE                       0x400FF000UL
-_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1553): warning:  #47-D: incompatible redefinition of macro "UART0_BASE"  (declared at line 61 of "inc/hw_memmap.h")
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1543): warning:  #47-D: incompatible redefinition of macro "WATCHDOG0_BASE"  (declared at line 51 of "inc/hw_memmap.h")
+  #define WATCHDOG0_BASE                  0x40000000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1544): warning:  #47-D: incompatible redefinition of macro "WATCHDOG1_BASE"  (declared at line 52 of "inc/hw_memmap.h")
+  #define WATCHDOG1_BASE                  0x40001000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1549): warning:  #47-D: incompatible redefinition of macro "SSI0_BASE"  (declared at line 57 of "inc/hw_memmap.h")
+  #define SSI0_BASE                       0x40008000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1550): warning:  #47-D: incompatible redefinition of macro "SSI1_BASE"  (declared at line 58 of "inc/hw_memmap.h")
+  #define SSI1_BASE                       0x40009000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1551): warning:  #47-D: incompatible redefinition of macro "SSI2_BASE"  (declared at line 59 of "inc/hw_memmap.h")
+  #define SSI2_BASE                       0x4000A000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1552): warning:  #47-D: incompatible redefinition of macro "SSI3_BASE"  (declared at line 60 of "inc/hw_memmap.h")
+  #define SSI3_BASE                       0x4000B000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1553): warning:  #47-D: incompatible redefinition of macro "UART0_BASE"  (declared at line 61 of "inc/hw_memmap.h")
   #define UART0_BASE                      0x4000C000UL
 C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1554): warning:  #47-D: incompatible redefinition of macro "UART1_BASE"  (declared at line 62 of "inc/hw_memmap.h")
   #define UART1_BASE                      0x4000D000UL
@@ -172,18 +159,43 @@ C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(15
   #define WTIMER5_BASE                    0x4004F000UL
 C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1588): warning:  #47-D: incompatible redefinition of macro "USB0_BASE"  (declared at line 99 of "inc/hw_memmap.h")
   #define USB0_BASE                       0x40050000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1595): warning:  #47-D: incompatible redefinition of macro "EEPROM_BASE"  (declared at line 121 of "inc/hw_memmap.h")
+  #define EEPROM_BASE                     0x400AF000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1596): warning:  #47-D: incompatible redefinition of macro "SYSEXC_BASE"  (declared at line 133 of "inc/hw_memmap.h")
+  #define SYSEXC_BASE                     0x400F9000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1597): warning:  #47-D: incompatible redefinition of macro "HIB_BASE"  (declared at line 134 of "inc/hw_memmap.h")
+  #define HIB_BASE                        0x400FC000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1598): warning:  #47-D: incompatible redefinition of macro "FLASH_CTRL_BASE"  (declared at line 135 of "inc/hw_memmap.h")
+  #define FLASH_CTRL_BASE                 0x400FD000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1599): warning:  #47-D: incompatible redefinition of macro "SYSCTL_BASE"  (declared at line 136 of "inc/hw_memmap.h")
+  #define SYSCTL_BASE                     0x400FE000UL
+C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h(1600): warning:  #47-D: incompatible redefinition of macro "UDMA_BASE"  (declared at line 137 of "inc/hw_memmap.h")
+  #define UDMA_BASE                       0x400FF000UL
 ./src/GPIO_helper.h(28): warning:  #1-D: last line of file ends without a newline
     void TurnOnLEDs2(void);
-./src/PWM_helper.h(11): warning:  #1-D: last line of file ends without a newline
-  #include "gpio.h"
+./src/PWM_helper.h(12): warning:  #1-D: last line of file ends without a newline
+  #include "pin_map.h"
 ./src/ADC_helper.h(31): warning:  #1-D: last line of file ends without a newline
   extern struct ADC_Strings_FSRs StringAndFSR_values;
-project.c(100): warning:  #1-D: last line of file ends without a newline
+project.c(95): warning:  #1-D: last line of file ends without a newline
   		}
 project.c(30): warning:  #177-D: variable "temp"  was declared but never referenced
   	  uint8_t temp;
 project.c: 58 warnings, 0 errors
-".\rvmdk\project.axf" - 4 Error(s), 62 Warning(s).
+compiling PWM_helper.c...
+src\PWM_helper.h(12): warning:  #1-D: last line of file ends without a newline
+  #include "pin_map.h"
+src\PWM_helper.c(68): warning:  #1-D: last line of file ends without a newline
+  }
+src\PWM_helper.c: 2 warnings, 0 errors
+compiling SysTick_helper.c...
+linking...
+.\rvmdk\project.axf: Error: L6200E: Symbol __ARM_use_no_argv multiply defined (by pwm_helper.o and project.o).
+.\rvmdk\project.axf: Error: L6200E: Symbol main multiply defined (by pwm_helper.o and project.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+".\rvmdk\project.axf" - 2 Error(s), 69 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -207,7 +219,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.0.1
 Target not created.
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

@@ -9,3 +9,6 @@
 #include "hw_types.h"
 #include "pwm.h"
 #include "gpio.h"
+#include "pin_map.h"
+
+void SetUpPWM50cycle(void);
