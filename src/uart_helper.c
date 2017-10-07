@@ -2,7 +2,7 @@
 
 //*****************************************************************************
 //
-// The error routine that is called if the driver library encounters an error.
+// The error routine that is called if the driver library encounters an error. This code allows you to choose from 4 options and gives you different characters.
 //
 //*****************************************************************************
 

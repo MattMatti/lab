@@ -1,4 +1,6 @@
 //Matthew Matti & Lakeysha Green
+// I tried to initialize everything and set up the ADC pins and then try to correlate it to the photoresistor but I didn't get the chance and 
+// sort of didn't know how.. I will try this weekend. sorry yo
 #include "ADC_helper.h"
 
 uint32_t ADC_Values[13];

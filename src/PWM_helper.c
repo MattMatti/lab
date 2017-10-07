@@ -1,5 +1,7 @@
 #include "PWM_helper.h"
 
+// this code initializes the pins as pwm and sets the clock cycle to 16 MHZ. It also makes a 50% duty cycle. It then enables the PWM generator 2 and 3.
+// I didn't have the chance to try and implement it into the main code.
 void delayMS(int ms) 
 	{
     SysCtlDelay( (SysCtlClockGet()/(3*1000))*ms );
@@ -29,11 +31,11 @@ void delayMS(int ms)
     PWMGenConfigure(PWM1_BASE, PWM_GEN_2, PWM_GEN_MODE_DOWN | PWM_GEN_MODE_NO_SYNC); 
     PWMGenConfigure(PWM1_BASE, PWM_GEN_3, PWM_GEN_MODE_DOWN | PWM_GEN_MODE_NO_SYNC); 
 
-    //Set the Period (expressed in clock ticks)
+    //this Sets the Period (expressed in clock ticks)
     PWMGenPeriodSet(PWM1_BASE, PWM_GEN_2, 320);
     PWMGenPeriodSet(PWM1_BASE, PWM_GEN_3, 320);
 
-    //Set PWM duty-50% (Period /2)
+    // this is setting the PWM duty-50% (Period /2)
     PWMPulseWidthSet(PWM1_BASE, PWM_OUT_5,100);
     PWMPulseWidthSet(PWM1_BASE, PWM_OUT_6,100);
     PWMPulseWidthSet(PWM1_BASE, PWM_OUT_7,100);

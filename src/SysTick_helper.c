@@ -1,7 +1,7 @@
 #include "SysTick_helper.h"
 #include "tm4c123gh6pm.h"
 
-//must be accurate.. for systick
+//must be accurate.. for systick setss the systick timer for 10 ms but the set period is set to 14.7 ms
 
 int SetPeriod = 0x0011FFFF;
 
