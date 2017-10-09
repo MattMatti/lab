@@ -1,6 +1,6 @@
 #include <stdbool.h>
 #include <stdint.h>
-#include "sysctl.h"
+//#include "sysctl.h"
 #include "hw_memmap.h"
 #include "adc.h"
 #include "uart.h"
