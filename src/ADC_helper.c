@@ -3,14 +3,15 @@
 // sort of didn't know how.. I will try this weekend. sorry yo
 #include "ADC_helper.h"
 
-uint32_t ADC_Values[13];
+uint32_t ADC_Values[24];
 
 
 //set up for 2 pots and accelerometer + 1 extra
 void SetupADCPins()
 {
-	GPIOPinTypeADC(GPIO_PORTE_BASE,GPIO_PIN_3|GPIO_PIN_2|GPIO_PIN_1); // pin 3 is AIN0 pin 2 is AIN1 pin 1 is AIN2 (bit wise or 0b00000111)
-	GPIOPinTypeADC(GPIO_PORTD_BASE,GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3); //AIN7-pin 0, AIN6-pin 1, AIN5 - pin 2, AIN4- pin 3 (bit wise or 0b00001111)
+	GPIOPinTypeADC(GPIO_PORTE_BASE,GPIO_PIN_1);
+//	GPIOPinTypeADC(GPIO_PORTE_BASE,GPIO_PIN_3|GPIO_PIN_2|GPIO_PIN_1); // pin 3 is AIN0 pin 2 is AIN1 pin 1 is AIN2 (bit wise or 0b00000111)
+//GPIOPinTypeADC(GPIO_PORTD_BASE,GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3); //AIN7-pin 0, AIN6-pin 1, AIN5 - pin 2, AIN4- pin 3 (bit wise or 0b00001111)
 	//GPIOPinTypeADC(GPIO_PORTE_BASE,GPIO_PIN_2);
 	
 }
@@ -38,7 +39,6 @@ void SetupADC()
 	//
 	ADCSequenceDisable(ADC0_BASE,0); 
 	ADCSequenceConfigure(ADC0_BASE, 0, ADC_TRIGGER_PROCESSOR, 0); 
-	//ADCSequenceStepConfigure(ADC0_BASE, 0, 0,	ADC_CTL_IE | ADC_CTL_END | ADC_CTL_CH1 | ADC_CTL_CH2| ADC_CTL_CH4| ADC_CTL_CH5| ADC_CTL_CH6| ADC_CTL_CH7);
 	ADCSequenceStepConfigure(ADC0_BASE, 0, 0, ADC_CTL_CH0 );
   ADCSequenceStepConfigure(ADC0_BASE, 0, 1, ADC_CTL_CH1 );	
   ADCSequenceStepConfigure(ADC0_BASE, 0, 2, ADC_CTL_CH2 );	
@@ -58,7 +58,7 @@ void SetupADC()
 
 void ADCReadChan()
 {
-	int32_t light;
+	int32_t string1;
 	//
 	//
 	ADCProcessorTrigger(ADC0_BASE, 0); // Trigger the sample sequence above (sequence 0)
@@ -74,9 +74,11 @@ void ADCReadChan()
 	// Read the value from the ADC.
 	//
 	
-	light = (ADCSequenceDataGet(ADC0_BASE, 0, ADC_Values));
-	if (light < 13)
+	string1 = (ADCSequenceDataGet(ADC0_BASE, 0, ADC_Values));
+	if (string1 < 0xFFF)
 	{
-		ADC_Values[12]=light; 
+		ADC_Values[2]= string1; 
 	}
+	
+	
 }

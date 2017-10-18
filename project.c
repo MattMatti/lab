@@ -27,7 +27,7 @@ int  main(void)
 	
     SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0); //enables ADC module 0
     SysCtlPeripheralReset(SYSCTL_PERIPH_ADC0); // resets ADC module 0 
-	  uint8_t temp;
+	  //uint8_t temp;
 	
     //SetupHardware();
 	
@@ -39,6 +39,8 @@ int  main(void)
     
     while(1)
 		{
+			
+	
 // UART
 //			{
 //		  UARTCharPut(UART0_BASE, temp);
@@ -68,28 +70,28 @@ int  main(void)
 //GPIO
 	
 
-	GPIOSetup();
-	
-  UpdateMYButtons();
-	
-	if(MyButtons.SW1==0)
-				{
-				}
-				else
-				{				
-		
-			TurnOnLEDs();
-	
-	}
-	if(MyButtons.SW2==0)
-				{
-				}
-				else
-				{	
+//	GPIOSetup();
+//	
+//  UpdateMYButtons();
+//	
+//	if(MyButtons.SW1==0)
+//				{
+//				}
+//				else
+//				{				
+//		
+//			TurnOnLEDs();
+//	
+//	}
+//	if(MyButtons.SW2==0)
+//				{
+//				}
+//				else
+//				{	
 
-				TurnOnLEDs2();
-		
-}
-			
-			}
+//				TurnOnLEDs2();
+//		
+//}
+//			
+//			}
 		}
